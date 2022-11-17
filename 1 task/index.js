@@ -17,7 +17,7 @@ const createTimerAnimator = () => {
       if (seconds <= 0) return;
       seconds--;
       const hours = Math.floor(seconds / 60 / 60),
-        minutes = Math.floor(seconds * 60 / 60 / 60) - (hours * 60);
+        minutes = Math.floor(seconds / 60) - (hours * 60);
       timerEl.innerHTML = `${form(hours)}:${form(minutes)}:${form(seconds % 60)}`
     }, 1000);
   };
