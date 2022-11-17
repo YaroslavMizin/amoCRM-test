@@ -1,0 +1,134 @@
+main {
+    flex: 1 1 auto;
+    height: 100%;
+}
+.main {
+    margin-top: 100px;
+    height: fit-content;
+}
+
+/* левая часть */
+
+.main-title {
+    max-width: 362px;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+.main-title__gradient {
+    font-weight: 900;
+    background: linear-gradient(90deg, #FCB045, #FF3F78);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main-subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* правая часть */
+
+.content {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+    text-align: right;
+    max-width: 300px;
+}
+.content-header {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffc31e, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content-header__text {
+    text-transform: none;
+    -webkit-text-fill-color: #E4E5EA;
+}
+.content-body {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.content-body_mob {
+    display: none;
+}
+.content-body__element {
+    flex: 1;
+}
+.content-body__title {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 6px 0;
+}
+.content-body__text {
+    font-size: 16px;
+}
+.button_common {
+    background-color: #4077F3;
+    padding: 21px 35px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+@media screen and (max-width: 999px) {
+    main {
+        background: radial-gradient(238.53% 189.02% at 3.2% 3.49%,
+                rgba(255, 246, 233, 0.137) 0%,
+                rgba(26, 29, 35, 0.1) 26.62%,
+                rgba(26, 29, 35, 0.1) 52.1%,
+                rgba(26, 29, 35, 0.01) 70.17%,
+                rgba(26, 29, 35, 0) 100%);
+        backdrop-filter: blur(7.5px);
+        z-index: -1;
+    }
+    .button_common {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .main {
+        flex-direction: column;
+        margin: 40px 0 60px;
+        gap: 45px;
+    }
+    .main-title {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    .content {
+        text-align: left;
+        align-items: flex-start;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .content-body {
+        display: none;
+    }
+    .content-body_mob {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        list-style: none;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+    .content-body_mob li {
+        min-width: 110px;
+    }
+    .content-body_mob li::before {
+        content: url('../assets/dash.svg');
+        position: relative;
+        width: 10px;
+        height: inherit;
+        margin-right: 5px;
+        bottom: 3px;
+    }
+}

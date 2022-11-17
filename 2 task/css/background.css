@@ -1,0 +1,119 @@
+
+.background__light {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(196px);
+}
+.background__light_purple {
+    top: -154px;
+    right: 40%;
+    margin: auto;
+    background-color: #833AB4;
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    opacity: 0.8;
+    z-index: -1;
+}
+.background__light_red {
+    left: -102px;
+    width: 311px;
+    height: 311px;
+    top: 30%;
+    background-color: #961A1A;
+    opacity: 0.5;
+    z-index: -1;
+}
+.background__ball {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -2;
+    backdrop-filter: blur(2px);
+}
+.background__ball_purple {
+    top: -2px;
+    right: 36%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(64% 64% at 27.25% 26.5%,
+            rgba(236, 208, 255, 0.64) 0%,
+            rgba(161, 93, 207, 0.24) 59.67%,
+            rgba(118, 49, 164, 0.208) 78.59%,
+            rgba(86, 24, 128, 0.232) 100%);
+    box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+    filter: blur(5px);
+}
+.background__ball_orange {
+    top: 6%;
+    left: 36%;
+    width: 83px;
+    height: 83px;
+    background: radial-gradient(64% 64% at 27.25% 26.5%,
+            rgba(255, 208, 208, 0.536) 0%,
+            rgba(212, 93, 93, 0.264) 59.67%,
+            rgba(167, 49, 49, 0.248) 78.59%,
+            rgba(130, 25, 25, 0.248) 100%);
+    box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+}
+.background__ball_red {
+    top: 50%;
+    right: 40%;
+    width: 28px;
+    height: 28px;
+    background: radial-gradient(64% 64% at 27.25% 26.5%,
+            rgba(255, 208, 208, 0.48) 0%,
+            rgba(212, 93, 93, 0.248) 59.67%,
+            rgba(167, 49, 49, 0.264) 78.59%,
+            rgba(130, 25, 25, 0.232) 100%);
+    box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+    filter: blur(2.5px);
+}
+
+@media screen and (max-width: 999px) {
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        mix-blend-mode: overlay;
+        overflow: hidden;
+    }
+    .background__light_purple {
+        margin: 0;
+        top: 20%;
+        opacity: 1;
+        right: -150px;
+        filter: blur(160px);
+    }
+    .background__light_red {
+        top: auto;
+        left: -55px;
+        bottom: 0;
+        height: 210px;
+        width: 210px;
+        opacity: 0.8;
+        filter: blur(150px);
+    }
+    .background__ball_red {
+        top: auto;
+        left: 5%;
+        bottom: -3px;
+        width: 43px;
+        height: 43px;
+        z-index: -2;
+        filter: blur(5px);
+    }
+    .background__ball_purple {
+        top: 50%;
+        right: -7px;
+        bottom: -3px;
+        width: 40px;
+        height: 40px;
+        z-index: -2;
+        filter: blur(5px);
+    }
+    .background__ball_orange {
+        display: none;
+    }
+}

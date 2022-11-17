@@ -1,0 +1,64 @@
+header {
+    height: 140px;
+    align-items: center;
+}
+.logo {
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+.logo__title {
+    font-size: 10px;
+    font-weight: 300;
+    position: absolute;
+    top: 130%;
+}
+.nav {
+    gap: 30px;
+}
+.nav__link {
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact {
+    gap: 48px;
+    flex: 0.8;
+    justify-content: flex-end;
+}
+.messangers {
+    gap: 34px;
+}
+
+@media screen and (max-width: 1070px) {
+    .logo {
+        display: none;
+    }
+    .contact {
+        display: none;
+    }
+    .nav {
+        margin: auto;
+    }
+    .nav>a:last-child {
+        display: none;
+    }
+    header {
+        background-color: inherit;
+        height: 70px;
+    }
+    header .container {
+        height: inherit;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    header .text_inter {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .nav {
+        margin: auto;
+        width: 100%;
+        gap: 0;
+    }
+}
